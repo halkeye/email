@@ -353,6 +353,15 @@ class Kohana_Email {
 		return $this;
 	}
 
+	public function id($id = NULL)
+	{
+		if (is_null($id))
+		{
+			return $this->_message->getId();
+		}
+		return $this->_message->setId($id);
+	}
+
 	/**
 	 * Send the email. Failed recipients can be collected by passing an array.
 	 *
